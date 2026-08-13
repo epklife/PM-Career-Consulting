@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PM Coach, Mentor & Accountability Partner | Kos Vibhute</title>
+<style>
+  @page {
+    size: A4;
+    margin: 8mm 10mm 8mm 10mm;
+    background-color: #f8fafc;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #0f172a;
+    font-size: 8.5pt;
+    line-height: 1.3;
+    background-color: #f8fafc;
+  }
+
+  /* Header Section */
+  .header-card {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 7px;
+  }
+
+  .header-top {
+    display: table;
+    width: 100%;
+  }
+
+  .header-title-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .header-badge-cell {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+
+  .badge {
+    display: inline-block;
+    background-color: #f59e0b;
+    color: #0f172a;
+    font-size: 6.8pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 15pt;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 2px 0;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+  }
+
+  .subtitle {
+    font-size: 8.5pt;
+    color: #cbd5e1;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  /* HERO STAT POP CARDS */
+  .stat-pop-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px;
+    margin: 0 0 7px -5px;
+  }
+
+  .stat-pop-td {
+    width: 16.6%;
+    vertical-align: top;
+  }
+
+  .stat-pop-card {
+    border-radius: 8px;
+    padding: 7px 4px 6px 4px;
+    text-align: center;
+    box-shadow: 0 2px 0 rgba(15,23,42,0.15);
+  }
+
+  .stat-pop-num {
+    font-size: 12pt;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.3px;
+  }
+
+  .stat-pop-label {
+    font-size: 6pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    line-height: 1.15;
+    margin-top: 2px;
+  }
+
+  .pop-amber { background-color: #fef3c7; border: 1.5px solid #f59e0b; }
+  .pop-amber .stat-pop-num { color: #92400e; }
+  .pop-amber .stat-pop-label { color: #92400e; }
+
+  .pop-blue { background-color: #dbeafe; border: 1.5px solid #2563eb; }
+  .pop-blue .stat-pop-num { color: #1e3a8a; }
+  .pop-blue .stat-pop-label { color: #1e40af; }
+
+  .pop-green { background-color: #dcfce7; border: 1.5px solid #22c55e; }
+  .pop-green .stat-pop-num { color: #14532d; }
+  .pop-green .stat-pop-label { color: #166534; }
+
+  .pop-purple { background-color: #ede9fe; border: 1.5px solid #8b5cf6; }
+  .pop-purple .stat-pop-num { color: #4c1d95; }
+  .pop-purple .stat-pop-label { color: #5b21b6; }
+
+  .pop-rose { background-color: #ffe4e6; border: 1.5px solid #fb7185; }
+  .pop-rose .stat-pop-num { color: #881337; }
+  .pop-rose .stat-pop-label { color: #9f1239; }
+
+  .pop-slate { background-color: #0f172a; border: 1.5px solid #0f172a; }
+  .pop-slate .stat-pop-num { color: #f59e0b; font-size: 9pt; }
+  .pop-slate .stat-pop-label { color: #cbd5e1; }
+
+  /* Mentor Profile Section */
+  .profile-card {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 7px;
+  }
+
+  .profile-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .avatar-td {
+    width: 60px;
+    vertical-align: middle;
+  }
+
+  .avatar-img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid #2563eb;
+    object-fit: cover;
+  }
+
+  .profile-info-td {
+    vertical-align: top;
+    padding-left: 10px;
+  }
+
+  .mentor-name {
+    font-size: 10pt;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 1px 0;
+  }
+
+  .mentor-tagline {
+    font-size: 7.8pt;
+    color: #2563eb;
+    font-weight: 700;
+    margin: 0 0 3px 0;
+  }
+
+  .mentor-bio {
+    font-size: 7.8pt;
+    color: #334155;
+    margin: 0 0 5px 0;
+    line-height: 1.25;
+  }
+
+  .contact-bar {
+    font-size: 7.2pt;
+    color: #334155;
+    background-color: #f1f5f9;
+    padding: 3px 6px;
+    border-radius: 4px;
+    display: block;
+  }
+
+  .contact-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* Free intro call banner */
+  .free-call-banner {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin-bottom: 7px;
+    text-align: center;
+  }
+
+  .free-call-title {
+    font-size: 8.5pt;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 1px 0;
+  }
+
+  .free-call-sub {
+    font-size: 7.2pt;
+    color: #dbeafe;
+    margin: 0;
+  }
+
+  /* Social Proof / Recommendation Highlights */
+  .praise-card {
+    background-color: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin-bottom: 7px;
+  }
+
+  .praise-header {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+  }
+
+  .praise-grid {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .praise-td {
+    width: 33.33%;
+    font-size: 7.2pt;
+    color: #475569;
+    padding-right: 6px;
+    vertical-align: top;
+  }
+
+  .praise-td:last-child {
+    padding-right: 0;
+  }
+
+  /* Hook Quote Box */
+  .hook-box {
+    background-color: #eff6ff;
+    border-left: 3px solid #2563eb;
+    border-radius: 0 6px 6px 0;
+    padding: 6px 10px;
+    margin-bottom: 7px;
+    font-size: 7.8pt;
+    color: #1e3a8a;
+  }
+
+  .hook-box p {
+    margin: 0 0 2px 0;
+  }
+
+  .hook-box p:last-child {
+    margin: 0;
+  }
+
+  /* Core Curriculum 2x2 Layout */
+  .section-title {
+    font-size: 8.8pt;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1.5px solid #e2e8f0;
+    padding-bottom: 2px;
+  }
+
+  .grid-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 6px;
+    margin-left: -6px;
+    margin-right: -6px;
+    margin-bottom: 4px;
+  }
+
+  .grid-td {
+    width: 50%;
+    vertical-align: top;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 6px 8px;
+  }
+
+  .mod-num {
+    font-size: 6.8pt;
+    font-weight: 800;
+    color: #2563eb;
+    text-transform: uppercase;
+  }
+
+  .mod-title {
+    font-size: 8.2pt;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 1px 0 2px 0;
+  }
+
+  .mod-desc {
+    font-size: 7.5pt;
+    color: #475569;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .bonus-strip {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 7.2pt;
+    color: #166534;
+    margin-bottom: 7px;
+  }
+
+  /* Bottom Split: Investment & Motive */
+  .bottom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 7px;
+  }
+
+  .bottom-left {
+    width: 52%;
+    padding-right: 4px;
+    vertical-align: top;
+  }
+
+  .bottom-right {
+    width: 48%;
+    padding-left: 4px;
+    vertical-align: top;
+  }
+
+  .fee-card {
+    background: linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%);
+    border: 1px solid #fde68a;
+    border-radius: 6px;
+    padding: 6px 8px;
+  }
+
+  .fee-header {
+    font-size: 6.8pt;
+    font-weight: 800;
+    color: #92400e;
+    text-transform: uppercase;
+  }
+
+  .fee-amount {
+    font-size: 13pt;
+    font-weight: 800;
+    color: #78350f;
+    line-height: 1.1;
+    margin: 1px 0;
+  }
+
+  .fee-quote {
+    font-size: 7pt;
+    color: #78350f;
+    font-style: italic;
+    line-height: 1.2;
+    margin-top: 2px;
+  }
+
+  .motive-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 6px 8px;
+    height: 100%;
+  }
+
+  .motive-title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 2px 0;
+  }
+
+  .motive-text {
+    font-size: 7.2pt;
+    color: #475569;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  /* Footer CTA */
+  .footer-cta {
+    background-color: #0f172a;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 8px 12px;
+    text-align: center;
+  }
+
+  .cta-title {
+    font-size: 8.8pt;
+    font-weight: 700;
+    color: #f59e0b;
+    margin: 0 0 2px 0;
+  }
+
+  .cta-sub {
+    font-size: 7.5pt;
+    color: #cbd5e1;
+    margin: 0;
+  }
+
+</style>
+</head>
+<body>
+
+  <div class="header-card">
+    <div class="header-top">
+      <div class="header-title-cell">
+        <h1>PM Coach, Mentor & Accountability Partner</h1>
+        <div class="subtitle">Real-World PM Experience, Honest Career Building — 1:1 for MBA Aspirants & Early PMs</div>
+      </div>
+      <div class="header-badge-cell">
+        <span class="badge">Free 15-Min Intro Call</span>
+      </div>
+    </div>
+  </div>
+
+  <table class="stat-pop-table">
+    <tr>
+      <td class="stat-pop-td">
+        <div class="stat-pop-card pop-amber">
+          <div class="stat-pop-num">15+ Yrs</div>
+          <div class="stat-pop-label">Product Practitioner</div>
+        </div>
+      </td>
+      <td class="stat-pop-td">
+        <div class="stat-pop-card pop-blue">
+          <div class="stat-pop-num">3X</div>
+          <div class="stat-pop-label">Startup Veteran, B2B &amp; B2C</div>
+        </div>
+      </td>
+      <td class="stat-pop-td">
+        <div class="stat-pop-card pop-green">
+          <div class="stat-pop-num">$150M+</div>
+          <div class="stat-pop-label">Revenue Unlocked (4 Yrs)</div>
+        </div>
+      </td>
+      <td class="stat-pop-td">
+        <div class="stat-pop-card pop-purple">
+          <div class="stat-pop-num">1</div>
+          <div class="stat-pop-label">Granted AI Patent</div>
+        </div>
+      </td>
+      <td class="stat-pop-td">
+        <div class="stat-pop-card pop-rose">
+          <div class="stat-pop-num">25</div>
+          <div class="stat-pop-label">PMs Trained &amp; Mentored</div>
+        </div>
+      </td>
+      <td class="stat-pop-td">
+        <div class="stat-pop-card pop-slate">
+          <div class="stat-pop-num">Amazon / PayPal /<br>Intuit / UA / ESPN</div>
+          <div class="stat-pop-label">Brands Built For</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <div class="profile-card">
+    <table class="profile-table">
+      <tr>
+        <td class="avatar-td">
+          <img class="avatar-img" src="headshot-profile-photo.png" alt="Kos Vibhute Profile">
+        </td>
+        <td class="profile-info-td">
+          <div class="mentor-name">Kos (Kaustubh) Vibhute</div>
+          <div class="mentor-tagline">Principal PM, AI-led Customer Obsession | Patent Recipient | Innovation Catalyst</div>
+          <p class="mentor-bio">
+            15+ years as a product practitioner across Amazon (Alexa, Amazon Business), PayPal, and now Intuit, plus a 3X startup veteran across both B2B and B2C. Unlocked $150M+ in revenue over the last 4 years, built and led cross-functional teams of 25+, and hold a granted patent for on-device AI automation. I bring the confidence-building, story-craft, and accountability of a coach with the candor of someone who's actually shipped the work — mentored 25 PMs through a 12-week product excellence program and spoken to Product School's 1M+ member community.
+          </p>
+          <div class="contact-bar">
+            <strong>LinkedIn:</strong> <a class="contact-link" href="https://www.linkedin.com/in/kvibhute/">linkedin.com/in/kvibhute</a> &nbsp;|&nbsp;
+            <strong>Email:</strong> <a class="contact-link" href="mailto:kaustubh.vibhute@gmail.com">kaustubh.vibhute@gmail.com</a> &nbsp;|&nbsp;
+            <strong>Calendar:</strong> <a class="contact-link" href="https://calendar.app.google/qbpiANYUZjKqk75TA">Book your free 15-min intro call</a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="free-call-banner">
+    <div class="free-call-title">First Session Is On Me — 15 Minutes, Zero Obligation</div>
+    <div class="free-call-sub">Just book a slot on the calendar below. No pitch, no pressure — see if it's a fit before committing to anything.</div>
+  </div>
+
+  <div class="praise-card">
+    <div class="praise-header">What Teammates and Leaders Who Have Worked With Me Say</div>
+    <table class="praise-grid">
+      <tr>
+        <td class="praise-td">
+          <strong>"Clean Slate Problem Solving"</strong><br>
+          <em>"Solves problems open to all ideas. Consensus building and doing so while earning trust is something we can all learn from KV."</em> — S.B. (Amazon, PM)
+        </td>
+        <td class="praise-td">
+          <strong>"Quiet Confidence & Pragmatism"</strong><br>
+          <em>"Approaches problems in a pragmatic way with a quiet confidence that resonates with peers. Extremely easy to collaborate with."</em> — W.J. (Design Leader)
+        </td>
+        <td class="praise-td">
+          <strong>"Product Ownership & Coaching"</strong><br>
+          <em>"Demonstrated attributes like product ownership, technical mentoring, and coaching... A true self-motivated, honest team player."</em> — M.H. (Agile Practice Lead)
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="hook-box">
+    <p><strong>I've shipped Alexa Hunches, rebuilt Amazon Business accounts for thousands of merchants mid-pandemic, led PayPal's Gen AI sales assistant, and built products inside three startups before any of that</strong> — the kind of work that only happens by turning messy customer problems into a clear plan and shipping it. More importantly, I've failed plenty along the way and learned from every one of those failures — expect me to share those with you more often than the wins, along with the candid principles I actually operate by when the realities of this industry push back.</p>
+    <p>My job as your coach and accountability partner is simple: instill real confidence, help you find the courage to put yourself out there, remove the hesitations holding you back, and keep you honestly accountable to your goals. I'll inspire you with real examples and story-building techniques, and dig into your own experiences and instincts to help you craft a pitch and a story that's authentically yours — not a template.</p>
+  </div>
+
+  <div class="section-title">Program Roadmap (4 Live Sessions • 30–45 Mins Each)</div>
+
+  <table class="grid-table">
+    <tr>
+      <td class="grid-td">
+        <div class="mod-num">Session 01</div>
+        <div class="mod-title">Strategic Goal & Career Design</div>
+        <p class="mod-desc">Define your post-MBA target goals. Receive candid, real advice on designing your career intentionally to find the brand, role, and industry that truly fits you.</p>
+      </td>
+      <td class="grid-td">
+        <div class="mod-num">Session 02</div>
+        <div class="mod-title">Resume Blueprint & Projects</div>
+        <p class="mod-desc">Up-level your resume, address content gaps, and work on real-world projects. Includes potential hands-on consultation opportunity on a personal side project.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="grid-td">
+        <div class="mod-num">Session 03</div>
+        <div class="mod-title">Product Sense Interview Prep</div>
+        <p class="mod-desc">Master product design, strategy frameworks, and user-centric problem solving through structured, live mock practice and actionable feedback.</p>
+      </td>
+      <td class="grid-td">
+        <div class="mod-num">Session 04</div>
+        <div class="mod-title">Product Execution & Metrics</div>
+        <p class="mod-desc">Hands-on practice with execution scenarios, trade-off analysis, root-cause diagnostics, and setting business and product success metrics.</p>
+      </td>
+    </tr>
+  </table>
+
+  <div class="bonus-strip">
+    <strong>+ Bonus Modules Available:</strong> AI Tool Competency for Product Managers & Behavioral Interview Prep.
+  </div>
+
+  <table class="bottom-table">
+    <tr>
+      <td class="bottom-left">
+        <div class="fee-card">
+          <div class="fee-header">Introductory Time-Protection Fee</div>
+          <div class="fee-amount">$50 Upfront Total</div>
+          <div style="font-size: 6.8pt; font-weight: 600; color: #92400e;">(~ $10/session + $10 offline Q&A support)</div>
+          <div class="fee-quote">
+            "Would you buy me a coffee at a nice cafe in return for my time? If yes, then let me charge you a tiny fee instead — this non-profit token amount exists solely to protect my time, ensure mutual accountability, and avoid no-shows."
+          </div>
+        </div>
+      </td>
+      <td class="bottom-right">
+        <div class="motive-card">
+          <div class="motive-title">What's In It For Me?</div>
+          <p class="motive-text">
+            The pure satisfaction of working with serious PM aspirants who are in it for the right reasons, respect a mentor's time, and value learning from a real human PM in live sessions rather than AI bots or generic YouTube videos.
+          </p>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <div class="footer-cta">
+    <div class="cta-title">Start With the Free 15-Min Call — Limited Cohort, First 10 Respondents Only</div>
+    <div class="cta-sub">
+      Program completed over 6 weeks max (+2 weeks buffer). Email <strong>epkstay@gmail.com</strong> or book your free intro call directly on the calendar link above to lock in your spot!
+    </div>
+  </div>
+
+</body>
+</html>
