@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PM Coach, Mentor & Accountability Partner | Kos Vibhute</title>
+<title>The PM Job Market is Tough Right Now | Kos Vibhute</title>
 <style>
   * { box-sizing: border-box; }
   body {
@@ -40,7 +40,8 @@
     color: #9a3412;
   }
   h1 { font-size: 34px; font-weight: 800; margin: 0 0 10px 0; letter-spacing: -0.6px; }
-  .hero p { font-size: 16px; color: #e0e0fa; margin: 0; max-width: 520px; }
+  .hero .lede { font-size: 18px; color: #fff; font-weight: 650; margin: 0 0 10px 0; }
+  .hero p { font-size: 16px; color: #e0e0fa; margin: 0; max-width: 560px; }
 
   .profile-card {
     background: #fff;
@@ -96,6 +97,25 @@
   }
   .card p { font-size: 15px; color: #374151; margin: 0 0 12px 0; }
   .card p:last-child { margin-bottom: 0; }
+
+  .pillar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .pillar {
+    border: 1.5px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 16px;
+  }
+  .pillar .t { font-size: 15px; font-weight: 700; margin: 0 0 6px 0; color: #14151f; }
+  .pillar .d { font-size: 13px; color: #6b7280; margin: 0; }
+
+  .note {
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-size: 13px;
+    color: #475569;
+    margin-top: 14px;
+  }
 
   .quote-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .quote-tile {
@@ -174,7 +194,7 @@
   .cta .fine { font-size: 12.5px; color: #e0e0fa; margin-top: 14px; }
 
   @media (max-width: 640px) {
-    .stat-grid, .quote-grid, .session-grid, .split { grid-template-columns: 1fr; }
+    .stat-grid, .quote-grid, .session-grid, .split, .pillar-grid { grid-template-columns: 1fr; }
     .profile-card { flex-direction: column; text-align: center; }
     h1 { font-size: 26px; }
   }
@@ -188,9 +208,11 @@
       <div class="pill-row">
         <span class="pill">Free 15-Min Intro Call — No Obligation</span>
         <span class="pill fee-pill">$50 Total for 4 Sessions</span>
+        <span class="pill">10 Participants Only</span>
       </div>
-      <h1>PM Coach, Mentor & Accountability Partner</h1>
-      <p>Real-world product experience and honest career building — 1:1 for MBA aspirants and early PMs.</p>
+      <h1>The PM Job Market is Tough Right Now.</h1>
+      <p class="lede">Let's Fix It Together.</p>
+      <p>1:1 mentorship for recent grads and early-to-mid stage PMs (under 10 years experience) who need practical guidance without the bootcamp price tag.</p>
     </div>
   </div>
 
@@ -214,6 +236,36 @@
     <div class="stat-card"><div class="num" style="font-size:15px;">Alexa Smart Home</div><div class="label">Patent Recipient</div></div>
     <div class="stat-card"><div class="num">25</div><div class="label">PMs Mentored</div></div>
     <div class="stat-card"><div class="num" style="font-size:15px;">Amazon/PayPal<br>Intuit/UA/ESPN</div><div class="label">Brands Built For</div></div>
+  </div>
+
+  <div class="card">
+    <h2>Why This Exists</h2>
+    <p>The current market is brutal for recent grads and early-to-mid stage PMs (under 10 years experience). While paid product bootcamps have their place, their high costs shut out the exact people who need guidance the most.</p>
+    <p>After 15+ years across engineering and product management in B2B and consumer spaces, I receive daily outreach from professionals who just need practical, real-world perspective without the enterprise price tag.</p>
+    <p>I'm launching a streamlined, highly accessible initiative to change that. In the age of AI, we need more product-thinking professionals, not just job titles. I am opening this up to just 10 participants.</p>
+  </div>
+
+  <div class="card">
+    <h2>What You Get</h2>
+    <div class="pillar-grid">
+      <div class="pillar">
+        <div class="t">Real Mentorship</div>
+        <p class="d">Organic, practical conversations and curated insights based on 15+ years of industry experience.</p>
+      </div>
+      <div class="pillar">
+        <div class="t">Expert Network Access</div>
+        <p class="d">Direct exposure to seasoned leaders in data science, analytics, and strategic consulting.</p>
+      </div>
+      <div class="pillar">
+        <div class="t">Hands-On Experience</div>
+        <p class="d">Opportunities for select participants to build and work on personal projects alongside me.</p>
+      </div>
+      <div class="pillar">
+        <div class="t">Low Barrier to Entry</div>
+        <p class="d">Priced essentially at the cost of buying me a coffee — accessible, while filtering for committed candidates.</p>
+      </div>
+    </div>
+    <div class="note"><strong>A quick note:</strong> This is for authentic mentorship and growth — not a backdoor channel for direct job referrals. If you're ready to put in the work and want real guidance, book time below.</div>
   </div>
 
   <div class="card">
@@ -278,14 +330,14 @@
     </div>
     <div class="motive-card">
       <div class="h">What's In It For Me?</div>
-      <p>The pure satisfaction of working with serious PM aspirants who respect a mentor's time and value learning from a real human PM rather than AI bots or generic videos.</p>
+      <p>Working with serious PM candidates who respect a mentor's time, put in the work, and want real product-thinking — not a job-referral shortcut or another generic video course.</p>
     </div>
   </div>
 
   <div class="cta" style="margin-top: 20px;">
-    <div style="font-weight: 800; font-size: 17px;">Start With the Free 15-Min Call</div>
-    <a class="button" href="https://calendar.app.google/qbpiANYUZjKqk75TA">Book Now — No Pitch, No Pressure</a>
-    <div class="fine">Limited cohort, first 10 respondents. Program runs 6 weeks max (+2 weeks buffer). Or email epkstay@gmail.com.</div>
+    <div style="font-weight: 800; font-size: 17px;">Ready to put in the work?</div>
+    <a class="button" href="https://calendar.app.google/qbpiANYUZjKqk75TA">Schedule Time to Talk</a>
+    <div class="fine">Opening this up to just 10 participants. Free 15-min intro, then $50 for 4 sessions. Program runs 6 weeks max (+2 weeks buffer). Or email epkstay@gmail.com.</div>
   </div>
 
 </div>
