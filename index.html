@@ -2,344 +2,234 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The PM Job Market is Tough Right Now | Kos Vibhute</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM Career Consulting — Kos Vibhute</title>
+<meta name="description" content="1:1 PM mentorship for recent grads and early-to-mid stage PMs. $75 for 3 sessions. 5 spots only, Oct–Nov.">
 <style>
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: #f4f5fb;
-    color: #14151f;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.55;
+  :root{
+    --bg:#F8F9FA; --card:#ffffff; --text:#333333; --muted:#6B7280;
+    --primary:#6344F5; --primary-fg:#ffffff; --border:#E5E7EB; --soft:#F3F4F6;
+    --radius:16px;
   }
-  .wrap { max-width: 840px; margin: 0 auto; padding: 0 20px 80px; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--primary);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 1px 3px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.04);padding:32px;margin-top:20px}
+  .eyebrow{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--primary);margin-bottom:14px}
+  h1{font-size:34px;font-weight:800;line-height:1.15;letter-spacing:-.01em}
+  h2{font-size:15px}
+  p{font-size:15px;color:#3a3a3a}
+  .lede{font-size:20px;font-weight:600;margin-top:6px}
 
-  .hero {
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-    color: #fff;
-    border-radius: 0 0 28px 28px;
-    padding: 48px 32px 40px;
-    margin: 0 -20px 32px;
-  }
-  .hero-inner { max-width: 800px; margin: 0 auto; }
-  .pill-row { margin-bottom: 16px; }
-  .pill {
-    display: inline-block;
-    background: rgba(255,255,255,0.18);
-    padding: 5px 14px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.3px;
-    margin-right: 8px;
-    margin-bottom: 8px;
-  }
-  .pill.fee-pill {
-    background: #ffedd5;
-    color: #9a3412;
-  }
-  h1 { font-size: 34px; font-weight: 800; margin: 0 0 10px 0; letter-spacing: -0.6px; }
-  .hero .lede { font-size: 18px; color: #fff; font-weight: 650; margin: 0 0 10px 0; }
-  .hero p { font-size: 16px; color: #e0e0fa; margin: 0; max-width: 560px; }
+  /* Header */
+  header{background:var(--primary);color:var(--primary-fg);text-align:center;padding:64px 24px}
+  header .wrap{padding:0}
+  .pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:28px}
+  .pill{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(4px);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:500}
+  header h1{color:#fff}
+  header .lede{color:rgba(255,255,255,.92)}
+  header p.body{color:rgba(255,255,255,.88);max-width:560px;margin:18px auto 0;font-size:16px}
 
-  .profile-card {
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(79,70,229,0.12);
-    padding: 24px;
-    display: flex;
-    gap: 18px;
-    align-items: center;
-    margin-bottom: 24px;
-  }
-  .avatar { width: 76px; height: 76px; border-radius: 18px; object-fit: cover; flex-shrink: 0; }
-  .name { font-size: 19px; font-weight: 800; margin: 0; }
-  .role { font-size: 13px; color: #6d28d9; font-weight: 600; margin: 2px 0 8px 0; }
-  .links a {
-    color: #4f46e5;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    margin-right: 14px;
-  }
+  /* Profile */
+  .profile{margin-top:-40px;position:relative;z-index:2}
+  .profile-inner{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:center;text-align:center}
+  .profile img{width:88px;height:88px;border-radius:50%;object-fit:cover;flex-shrink:0}
+  .profile .name{font-size:18px;font-weight:700}
+  .profile .role{font-size:14px;color:var(--primary);font-weight:500;margin-top:2px}
+  .profile .links{display:flex;gap:16px;margin-top:10px;font-size:14px;justify-content:center;flex-wrap:wrap}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+  .stat{background:var(--card);border:1px solid var(--border);border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.04);padding:16px;text-align:center}
+  .stat .num{font-weight:800;font-size:22px}
+  .stat .num.small{font-size:13px;line-height:1.2}
+  .stat .label{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;margin-top:4px}
 
-  .stat-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-  .stat-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 18px 14px;
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(20,21,31,0.06);
-  }
-  .stat-card .num { font-size: 22px; font-weight: 800; background: linear-gradient(135deg,#4f46e5,#a855f7); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .stat-card .label { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.5px; color: #6b7280; margin-top: 4px; font-weight: 700; }
+  /* Featured quotes */
+  .featured{background:var(--primary);color:#fff;border-radius:var(--radius);padding:32px;box-shadow:0 8px 24px rgba(99,68,245,.18)}
+  .featured .eyebrow{color:rgba(255,255,255,.7);margin-bottom:20px}
+  .qgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  figure{position:relative}
+  .qmark{position:absolute;top:-14px;left:-4px;font-size:48px;line-height:1;color:rgba(255,255,255,.25);font-family:Georgia,serif}
+  blockquote{font-size:16px;font-weight:500;line-height:1.55;position:relative;z-index:1}
+  figcaption{margin-top:14px;font-size:14px}
+  figcaption b{font-weight:700}
+  figcaption .r{display:block;color:rgba(255,255,255,.75);font-size:12px;margin-top:2px}
 
-  .card {
-    background: #fff;
-    border-radius: 20px;
-    padding: 26px 28px;
-    margin-bottom: 20px;
-    box-shadow: 0 6px 18px rgba(20,21,31,0.06);
-  }
-  .card h2 {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #7c3aed;
-    margin: 0 0 14px 0;
-    font-weight: 800;
-  }
-  .card p { font-size: 15px; color: #374151; margin: 0 0 12px 0; }
-  .card p:last-child { margin-bottom: 0; }
+  /* Pillars / quotes grids */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .box{background:var(--soft);border-radius:12px;padding:16px}
+  .box .t{font-weight:600;font-size:15px}
+  .box p{font-size:14px;color:var(--muted);margin-top:4px}
+  .note{margin-top:18px;font-size:14px;background:var(--soft);border:1px solid var(--border);border-radius:12px;padding:14px}
 
-  .pillar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .pillar {
-    border: 1.5px solid #e5e7eb;
-    border-radius: 14px;
-    padding: 16px;
-  }
-  .pillar .t { font-size: 15px; font-weight: 700; margin: 0 0 6px 0; color: #14151f; }
-  .pillar .d { font-size: 13px; color: #6b7280; margin: 0; }
+  /* Roadmap */
+  .roadmap .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .sess{background:var(--soft);border-radius:12px;padding:16px}
+  .sess .no{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--primary)}
+  .sess .st{font-weight:600;margin-top:6px}
+  .sess p{font-size:14px;color:var(--muted);margin-top:6px}
+  .offline-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin:18px 0 8px}
+  .dashed{border:1px dashed var(--border);border-radius:12px;padding:16px}
+  .dashed .t{font-weight:600}
+  .dashed p{font-size:14px;color:var(--muted);margin-top:4px}
+  .bonus{margin-top:14px;font-size:14px}
 
-  .note {
-    background: #f8fafc;
-    border: 1.5px solid #e2e8f0;
-    border-radius: 14px;
-    padding: 14px 16px;
-    font-size: 13px;
-    color: #475569;
-    margin-top: 14px;
-  }
+  /* Fee split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .fee .amt{font-size:36px;font-weight:800;margin-top:8px}
+  .fee .quote{font-size:14px;color:var(--muted);margin-top:12px;font-style:italic}
 
-  .quote-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-  .quote-tile {
-    background: #f4f5fb;
-    border-radius: 14px;
-    padding: 16px;
-  }
-  .quote-tile .qt { font-size: 12px; font-weight: 800; color: #4f46e5; margin-bottom: 6px; }
-  .quote-tile p { font-size: 13px; color: #374151; margin-bottom: 6px; }
-  .quote-tile .who { font-size: 11.5px; color: #6b7280; }
+  /* CTA */
+  .cta{text-align:center}
+  .cta .h{font-size:18px;font-weight:800}
+  .btn{display:inline-block;background:var(--primary);color:#fff;font-weight:600;padding:12px 26px;border-radius:999px;margin-top:14px}
+  .btn:hover{opacity:.92;text-decoration:none}
+  .fine{font-size:12px;color:var(--muted);margin-top:14px;max-width:420px;margin-left:auto;margin-right:auto}
 
-  .session-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .session-tile {
-    border: 1.5px solid #e5e7eb;
-    border-radius: 14px;
-    padding: 16px;
-  }
-  .session-tile .n {
-    display: inline-block;
-    background: #ede9fe;
-    color: #6d28d9;
-    font-size: 10.5px;
-    font-weight: 800;
-    padding: 2px 8px;
-    border-radius: 8px;
-    margin-bottom: 8px;
-  }
-  .session-tile .t { font-size: 15.5px; font-weight: 700; margin: 0 0 4px 0; }
-  .session-tile .d { font-size: 13px; color: #6b7280; }
+  footer{text-align:center;padding:32px 24px;color:var(--muted);font-size:13px}
 
-  .bonus {
-    background: #ecfdf5;
-    border: 1.5px solid #a7f3d0;
-    border-radius: 14px;
-    padding: 12px 16px;
-    font-size: 13px;
-    color: #047857;
-  }
-
-  .split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; }
-  .fee-card {
-    background: linear-gradient(135deg, #fef3c7, #fffbeb);
-    border-radius: 20px;
-    padding: 22px 24px;
-  }
-  .fee-card .h { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #92400e; font-weight: 800; }
-  .fee-card .amt { font-size: 28px; font-weight: 800; color: #78350f; margin: 4px 0; }
-  .fee-card .note { font-size: 12.5px; color: #78350f; font-style: italic; }
-  .motive-card {
-    background: #fff;
-    border-radius: 20px;
-    padding: 22px 24px;
-    box-shadow: 0 6px 18px rgba(20,21,31,0.06);
-  }
-  .motive-card .h { font-size: 13px; font-weight: 800; margin-bottom: 6px; }
-  .motive-card p { font-size: 13px; color: #6b7280; margin: 0; }
-
-  .cta {
-    background: linear-gradient(135deg, #4f46e5, #7c3aed);
-    border-radius: 20px;
-    padding: 32px;
-    text-align: center;
-    color: #fff;
-  }
-  .cta a.button {
-    display: inline-block;
-    background: #fff;
-    color: #4f46e5;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 14px;
-    padding: 13px 30px;
-    border-radius: 30px;
-    margin-top: 6px;
-  }
-  .cta .fine { font-size: 12.5px; color: #e0e0fa; margin-top: 14px; }
-
-  @media (max-width: 640px) {
-    .stat-grid, .quote-grid, .session-grid, .split, .pillar-grid { grid-template-columns: 1fr; }
-    .profile-card { flex-direction: column; text-align: center; }
-    h1 { font-size: 26px; }
+  @media(max-width:600px){
+    h1{font-size:27px}
+    .stats,.qgrid,.grid2,.split,.roadmap .grid3{grid-template-columns:1fr}
+    .profile-inner{text-align:center}
   }
 </style>
 </head>
 <body>
+
+<header>
+  <div class="wrap">
+    <div class="pills">
+      <span class="pill">Free 15-Min Intro Call — No Obligation</span>
+      <span class="pill">$75 Total for 3 Sessions</span>
+      <span class="pill">5 Spots Only · Oct–Nov</span>
+    </div>
+    <h1>The PM Job Market is Tough Right Now.</h1>
+    <div class="lede">I want to help aspiring PMs break through the tough times.</div>
+    <p class="body">1:1 mentorship for recent grads and early-to-mid stage PMs (under 5 years experience) who need practical guidance without the bootcamp price tag.</p>
+  </div>
+</header>
+
 <div class="wrap">
 
-  <div class="hero">
-    <div class="hero-inner">
-      <div class="pill-row">
-        <span class="pill">Free 15-Min Intro Call — No Obligation</span>
-        <span class="pill fee-pill">$50 Total for 4 Sessions</span>
-        <span class="pill">10 Participants Only</span>
+  <!-- Profile -->
+  <div class="card profile">
+    <div class="profile-inner">
+      <img src="headshot-profile-photo.png" alt="Kos Vibhute">
+      <div>
+        <div class="name">Kos Vibhute</div>
+        <div class="role">Principal PM, AI-led Customer Obsession · Patent Recipient · Innovation Catalyst</div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/kvibhute/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="mailto:kos@epkstay.com">Email</a>
+          <a href="https://calendar.app.google/qbpiANYUZjKqk75TA" target="_blank" rel="noreferrer">Book free call</a>
+        </div>
       </div>
-      <h1>The PM Job Market is Tough Right Now.</h1>
-      <p class="lede">Let's Fix It Together.</p>
-      <p>1:1 mentorship for recent grads and early-to-mid stage PMs (under 10 years experience) who need practical guidance without the bootcamp price tag.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">15+ Yrs</div><div class="label">Product Practitioner</div></div>
+      <div class="stat"><div class="num">3X</div><div class="label">Startup Vet, B2B &amp; B2C</div></div>
+      <div class="stat"><div class="num">$150M+</div><div class="label">Revenue Unlocked</div></div>
+      <div class="stat"><div class="num small">Alexa Smart Home</div><div class="label">Patent Recipient</div></div>
+      <div class="stat"><div class="num">25</div><div class="label">PMs Mentored</div></div>
+      <div class="stat"><div class="num small">Amazon/PayPal Intuit/UA/ESPN</div><div class="label">Brands Built For</div></div>
     </div>
   </div>
 
-  <div class="profile-card">
-    <img class="avatar" src="headshot-profile-photo.png" alt="Kos Vibhute">
-    <div>
-      <p class="name">Kos Vibhute</p>
-      <p class="role">Principal PM, AI-led Customer Obsession &middot; Patent Recipient &middot; Innovation Catalyst</p>
-      <div class="links">
-        <a href="https://www.linkedin.com/in/kvibhute/">LinkedIn</a>
-        <a href="mailto:kaustubh.vibhute@gmail.com">Email</a>
-        <a href="https://calendar.app.google/qbpiANYUZjKqk75TA">Book free call</a>
-      </div>
+  <!-- Featured quotes -->
+  <div class="card featured">
+    <div class="eyebrow">What Candidates Are Saying</div>
+    <div class="qgrid">
+      <figure>
+        <span class="qmark">&ldquo;</span>
+        <blockquote>I especially like the focus on product sense and execution interview prep, as well as having a structured roadmap&hellip; It helps me brush up on everything.</blockquote>
+        <figcaption><b>— C. I.</b><span class="r">Berkeley Haas MBA Candidate '27 (Ex-Growth Product Manager)</span></figcaption>
+      </figure>
+      <figure>
+        <span class="qmark">&ldquo;</span>
+        <blockquote>This was really clarifying for me in determining what I truly want out of a product role — I really appreciate the structured guidance.</blockquote>
+        <figcaption><b>— K. N.</b><span class="r">Berkeley Haas MBA Candidate '27 (Former UX Researcher)</span></figcaption>
+      </figure>
     </div>
   </div>
 
-  <div class="stat-grid">
-    <div class="stat-card"><div class="num">15+ Yrs</div><div class="label">Product Practitioner</div></div>
-    <div class="stat-card"><div class="num">3X</div><div class="label">Startup Vet, B2B &amp; B2C</div></div>
-    <div class="stat-card"><div class="num">$150M+</div><div class="label">Revenue Unlocked</div></div>
-    <div class="stat-card"><div class="num" style="font-size:15px;">Alexa Smart Home</div><div class="label">Patent Recipient</div></div>
-    <div class="stat-card"><div class="num">25</div><div class="label">PMs Mentored</div></div>
-    <div class="stat-card"><div class="num" style="font-size:15px;">Amazon/PayPal<br>Intuit/UA/ESPN</div><div class="label">Brands Built For</div></div>
+  <!-- Why this exists -->
+  <div class="card">
+    <div class="eyebrow">Why This Exists</div>
+    <p style="margin-bottom:14px">The current market is brutal for recent grads and early-to-mid stage PMs (under 5 years experience). While paid product bootcamps have their place, their high costs shut out the exact people who need guidance the most.</p>
+    <p style="margin-bottom:14px">After 15+ years across engineering and product management in B2B and consumer spaces, I receive daily outreach from professionals who just need practical, real-world perspective without the enterprise price tag.</p>
+    <p>I'm launching a streamlined, highly accessible initiative to change that. In the age of AI, we need more product-thinking professionals, not just job titles. I am opening this up to just 5 participants.</p>
   </div>
 
+  <!-- What you get -->
   <div class="card">
-    <h2>Why This Exists</h2>
-    <p>The current market is brutal for recent grads and early-to-mid stage PMs (under 10 years experience). While paid product bootcamps have their place, their high costs shut out the exact people who need guidance the most.</p>
-    <p>After 15+ years across engineering and product management in B2B and consumer spaces, I receive daily outreach from professionals who just need practical, real-world perspective without the enterprise price tag.</p>
-    <p>I'm launching a streamlined, highly accessible initiative to change that. In the age of AI, we need more product-thinking professionals, not just job titles. I am opening this up to just 10 participants.</p>
-  </div>
-
-  <div class="card">
-    <h2>What You Get</h2>
-    <div class="pillar-grid">
-      <div class="pillar">
-        <div class="t">Real Mentorship</div>
-        <p class="d">Organic, practical conversations and curated insights based on 15+ years of industry experience.</p>
-      </div>
-      <div class="pillar">
-        <div class="t">Expert Network Access</div>
-        <p class="d">Direct exposure to seasoned leaders in data science, analytics, and strategic consulting.</p>
-      </div>
-      <div class="pillar">
-        <div class="t">Hands-On Experience</div>
-        <p class="d">Opportunities for select participants to build and work on personal projects alongside me.</p>
-      </div>
-      <div class="pillar">
-        <div class="t">Low Barrier to Entry</div>
-        <p class="d">Priced essentially at the cost of buying me a coffee — accessible, while filtering for committed candidates.</p>
-      </div>
+    <div class="eyebrow">What You Get</div>
+    <div class="grid2">
+      <div class="box"><div class="t">Real Mentorship</div><p>Organic, practical conversations and curated insights based on 15+ years of industry experience.</p></div>
+      <div class="box"><div class="t">Expert Network Access</div><p>Direct exposure to seasoned leaders in data science, analytics, and strategic consulting.</p></div>
+      <div class="box"><div class="t">Hands-On Experience</div><p>Opportunities for select participants to build and work on personal projects alongside me.</p></div>
+      <div class="box"><div class="t">Low Barrier to Entry</div><p>Priced essentially at the cost of buying me a coffee — accessible, while filtering for committed candidates.</p></div>
     </div>
-    <div class="note"><strong>A quick note:</strong> This is for authentic mentorship and growth — not a backdoor channel for direct job referrals. If you're ready to put in the work and want real guidance, book time below.</div>
+    <div class="note"><b>A quick note:</b> This is for authentic mentorship and growth — not a backdoor channel for direct job referrals. If you're ready to put in the work and want real guidance, book time below.</div>
   </div>
 
+  <!-- Why work with me -->
   <div class="card">
-    <h2>Why Work With Me</h2>
-    <p><strong>I've shipped Alexa Smart Home features, rebuilt Amazon Business accounts for thousands of merchants mid-pandemic, led PayPal's Gen AI sales assistant, and built products inside three startups before any of that</strong> — the kind of work that only happens by turning messy customer problems into a clear plan and shipping it. More importantly, I've failed plenty along the way — expect me to share those failures with you more often than the wins, along with the candid principles I actually operate by when the realities of this industry push back.</p>
+    <div class="eyebrow">Why Work With Me</div>
+    <p style="margin-bottom:14px"><b>I've shipped Alexa Smart Home features, rebuilt Amazon Business accounts for thousands of merchants mid-pandemic, led PayPal's Gen AI sales assistant, and built products inside three startups before any of that</b> — the kind of work that only happens by turning messy customer problems into a clear plan and shipping it. More importantly, I've failed plenty along the way — expect me to share those failures with you more often than the wins, along with the candid principles I actually operate by when the realities of this industry push back.</p>
     <p>My job as your coach and accountability partner is simple: instill real confidence, help you find the courage to put yourself out there, remove the hesitations holding you back, and keep you honestly accountable to your goals. I'll inspire you with real examples and story-building techniques, and dig into your own experiences and instincts to help you craft a pitch and a story that's authentically yours — not a template.</p>
   </div>
 
+  <!-- Testimonials -->
   <div class="card">
-    <h2>What Teammates and Leaders Who Have Worked With Me Say</h2>
-    <div class="quote-grid">
-      <div class="quote-tile">
-        <div class="qt">Clean Slate Problem Solving</div>
-        <p>"Solves problems open to all ideas. Consensus building and doing so while earning trust is something we can all learn from Kos."</p>
-        <div class="who">— S.B., Amazon PM</div>
-      </div>
-      <div class="quote-tile">
-        <div class="qt">Quiet Confidence & Pragmatism</div>
-        <p>"Approaches problems in a pragmatic way with a quiet confidence that resonates with peers. Extremely easy to collaborate with."</p>
-        <div class="who">— W.J., Design Leader</div>
-      </div>
-      <div class="quote-tile">
-        <div class="qt">Product Ownership & Coaching</div>
-        <p>"Demonstrated attributes like product ownership, technical mentoring, and coaching... A true self-motivated, honest team player."</p>
-        <div class="who">— M.H., Agile Practice Lead</div>
-      </div>
+    <div class="eyebrow">What Teammates and Leaders Who Have Worked With Me Say</div>
+    <div class="grid2" style="grid-template-columns:1fr">
+      <div class="box"><div class="t">Clean Slate Problem Solving</div><p>Solves problems open to all ideas. Consensus building and doing so while earning trust is something we can all learn from Kos.</p><div style="font-size:12px;color:var(--muted);margin-top:8px;font-weight:500">— S.B., Amazon PM</div></div>
+      <div class="box"><div class="t">Quiet Confidence &amp; Pragmatism</div><p>Approaches problems in a pragmatic way with a quiet confidence that resonates with peers. Extremely easy to collaborate with.</p><div style="font-size:12px;color:var(--muted);margin-top:8px;font-weight:500">— W.J., Design Leader</div></div>
+      <div class="box"><div class="t">Product Ownership &amp; Coaching</div><p>Demonstrated attributes like product ownership, technical mentoring, and coaching... A true self-motivated, honest team player.</p><div style="font-size:12px;color:var(--muted);margin-top:8px;font-weight:500">— M.H., Agile Practice Lead</div></div>
     </div>
   </div>
 
-  <div class="card">
-    <h2>Program Roadmap — 4 Live Sessions, 30&ndash;45 Min Each</h2>
-    <div class="session-grid">
-      <div class="session-tile">
-        <div class="n">SESSION 01</div>
-        <div class="t">Strategic Goal & Career Design</div>
-        <div class="d">Define your Product Management (or related) career goals with candid, real advice on designing your career intentionally.</div>
-      </div>
-      <div class="session-tile">
-        <div class="n">SESSION 02</div>
-        <div class="t">Resume Blueprint & Projects</div>
-        <div class="d">Up-level your resume and work on real-world projects, including a potential hands-on consult.</div>
-      </div>
-      <div class="session-tile">
-        <div class="n">SESSION 03</div>
-        <div class="t">Product Sense Interview Prep</div>
-        <div class="d">Master product design and strategy frameworks through live mock practice and feedback.</div>
-      </div>
-      <div class="session-tile">
-        <div class="n">SESSION 04</div>
-        <div class="t">Product Execution & Metrics</div>
-        <div class="d">Hands-on practice with execution scenarios, trade-offs, and setting success metrics.</div>
-      </div>
+  <!-- Roadmap -->
+  <div class="card roadmap">
+    <div class="eyebrow">Program Roadmap — 3 Live Sessions, 30–45 Min Each</div>
+    <div class="grid3">
+      <div class="sess"><div class="no">Session 01</div><div class="st">Strategic Goal &amp; Career Design</div><p>Define your PM (or related) career goals with candid, real advice on designing your career intentionally.</p></div>
+      <div class="sess"><div class="no">Session 02</div><div class="st">Product Sense Interview Prep</div><p>Master product design and strategy frameworks through live mock practice and feedback.</p></div>
+      <div class="sess"><div class="no">Session 03</div><div class="st">Product Execution &amp; Metrics</div><p>Hands-on practice with execution scenarios, trade-offs, and setting success metrics.</p></div>
     </div>
-    <div class="bonus" style="margin-top: 14px;"><strong>+ Bonus modules:</strong> AI tool competency for PMs &amp; behavioral interview prep.</div>
+    <div class="offline-label">Optional · Offline-Supported · Included Past the 3 Sessions</div>
+    <div class="grid2">
+      <div class="dashed"><div class="t">Resume Blueprint</div><p>Submit your resume for a structured written audit and rewrite directions — no live session required.</p></div>
+      <div class="dashed"><div class="t">Projects Portfolio</div><p>Get a reviewed, annotated brief on a personal project you can build to stand out — delivered async.</p></div>
+    </div>
+    <div class="bonus"><b>+ Bonus modules:</b> AI tool competency for PMs &amp; behavioral interview prep.</div>
   </div>
 
-  <div class="split">
-    <div class="fee-card">
-      <div class="h">Introductory Time-Protection Fee</div>
-      <div class="amt">$50 Total</div>
-      <div class="note">"Would you buy me a coffee at a nice cafe in return for my time? If yes, then let me charge you a tiny fee instead — this non-profit token amount exists solely to protect my time, ensure mutual accountability, and avoid no-shows."</div>
+  <!-- Fee split -->
+  <div class="card split">
+    <div class="fee">
+      <div class="eyebrow">Introductory Time-Protection Fee</div>
+      <div class="amt">$75 Total</div>
+      <div class="quote">&ldquo;Would you buy me a coffee at a nice cafe in return for my time? If yes, then let me charge you a tiny fee instead — this non-profit token amount exists solely to protect my time, ensure mutual accountability, and avoid no-shows.&rdquo;</div>
     </div>
-    <div class="motive-card">
-      <div class="h">What's In It For Me?</div>
-      <p>Working with serious PM candidates who respect a mentor's time, put in the work, and want real product-thinking — not a job-referral shortcut or another generic video course.</p>
+    <div>
+      <div class="eyebrow">What's In It For Me?</div>
+      <p style="margin-top:10px">Working with serious PM candidates who respect a mentor's time, put in the work, and want real product-thinking — not a job-referral shortcut or another generic video course.</p>
     </div>
   </div>
 
-  <div class="cta" style="margin-top: 20px;">
-    <div style="font-weight: 800; font-size: 17px;">Ready to put in the work?</div>
-    <a class="button" href="https://calendar.app.google/qbpiANYUZjKqk75TA">Schedule Time to Talk</a>
-    <div class="fine">Opening this up to just 10 participants. Free 15-min intro, then $50 for 4 sessions. Program runs 6 weeks max (+2 weeks buffer). Or email epkstay@gmail.com.</div>
+  <!-- CTA -->
+  <div class="card cta">
+    <div class="h">Ready to put in the work?</div>
+    <a class="btn" href="https://calendar.app.google/qbpiANYUZjKqk75TA" target="_blank" rel="noreferrer">Schedule Time to Talk</a>
+    <div class="fine">Opening this up to just 5 participants. Free 15-min intro, then $75 for 3 sessions. Or email kos@epkstay.com.</div>
   </div>
 
 </div>
+
+<footer>© <span id="y"></span> Kos Vibhute · PM Career Consulting</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
