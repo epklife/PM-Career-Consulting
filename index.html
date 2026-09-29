@@ -46,6 +46,25 @@
   .stat .num.small{font-size:13px;line-height:1.2}
   .stat .label{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;margin-top:4px}
 
+  /* Videos */
+  .vstage{display:flex;justify-content:center;margin-top:16px}
+  .vframe{width:100%;background:#000;border-radius:12px;overflow:hidden}
+  .vframe.wide{aspect-ratio:16/9}
+  .vframe.tall{aspect-ratio:9/16;max-width:250px}
+  .vframe iframe{display:block;width:100%;height:100%;border:0}
+  .vmeta{text-align:center;margin-top:16px}
+  .vtitle{font-size:14px;font-weight:600}
+  .vctrl{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:10px}
+  .vbtn{background:var(--card);border:1px solid var(--border);border-radius:999px;width:30px;height:30px;font-size:15px;line-height:1;cursor:pointer;color:var(--text)}
+  .vbtn:hover{border-color:var(--primary);color:var(--primary)}
+  .vcount{font-size:12px;color:var(--muted)}
+  .vrail{display:flex;gap:12px;overflow-x:auto;margin-top:18px;padding-bottom:4px}
+  .vthumb{flex:0 0 auto;width:96px;border:2px solid transparent;border-radius:10px;overflow:hidden;background:var(--soft);cursor:pointer;padding:0;line-height:0}
+  .vthumb img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+  .vthumb.active{border-color:var(--primary)}
+  .vthumb:hover{border-color:var(--primary)}
+  .vlink{display:block;text-align:center;font-size:13px;font-weight:600;margin-top:16px}
+
   /* Featured quotes */
   .featured{background:var(--primary);color:#fff;border-radius:var(--radius);padding:32px;box-shadow:0 8px 24px rgba(99,68,245,.18)}
   .featured .eyebrow{color:rgba(255,255,255,.7);margin-bottom:20px}
@@ -137,6 +156,23 @@
       <div class="stat"><div class="num">25</div><div class="label">PMs Mentored</div></div>
       <div class="stat"><div class="num small">Amazon/PayPal Intuit/UA/ESPN</div><div class="label">Brands Built For</div></div>
     </div>
+  </div>
+
+  <!-- Videos -->
+  <div class="card">
+    <div class="eyebrow">From My YouTube Channel</div>
+    <p>Short, practical takes on product thinking — the same ideas I bring to our sessions.</p>
+    <div class="vstage"><div class="vframe" id="vframe"></div></div>
+    <div class="vmeta">
+      <div class="vtitle" id="vtitle"></div>
+      <div class="vctrl">
+        <button class="vbtn" type="button" id="vprev" aria-label="Previous video">&lsaquo;</button>
+        <span class="vcount" id="vcount"></span>
+        <button class="vbtn" type="button" id="vnext" aria-label="Next video">&rsaquo;</button>
+      </div>
+    </div>
+    <div class="vrail" id="vrail"></div>
+    <a class="vlink" href="https://youtube.com/@kosv-w6o" target="_blank" rel="noreferrer">Visit my channel →</a>
   </div>
 
   <!-- Featured quotes -->
@@ -233,5 +269,37 @@
 
 <footer>© <span id="y"></span> Kos Vibhute · PM Career Consulting</footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script>
+(function(){
+  var V=[
+    ["Jx3eCyVn0e0","Inside My PM Coaching Sessions",1],
+    ["OlMf_28kJGM","How to Reset a Rushed Interview",1],
+    ["kOzuqceKSgA","Think Like a Researcher, Answer Like a PM",1],
+    ["5Ja9oNlt8bY","AI Equipped vs AI Native Product Management",1],
+    ["9E8P-aeTWnA","Find the Hidden Stakeholder",0]
+  ];
+  var i=0;
+  var frame=document.getElementById('vframe'),title=document.getElementById('vtitle'),
+      count=document.getElementById('vcount'),rail=document.getElementById('vrail');
+  function render(){
+    var v=V[i];
+    frame.className='vframe '+(v[2]?'tall':'wide');
+    frame.innerHTML='<iframe src="https://www.youtube.com/embed/'+v[0]+'" title="'+v[1]+'" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    title.textContent=v[1];
+    count.textContent=(i+1)+' / '+V.length;
+    for(var k=0;k<rail.children.length;k++){rail.children[k].className='vthumb'+(k===i?' active':'');}
+  }
+  V.forEach(function(v,k){
+    var b=document.createElement('button');
+    b.type='button';b.className='vthumb';b.setAttribute('aria-label','Play '+v[1]);
+    b.innerHTML='<img src="https://i.ytimg.com/vi/'+v[0]+'/hq720.jpg" alt="'+v[1]+'" loading="lazy">';
+    b.onclick=function(){i=k;render();};
+    rail.appendChild(b);
+  });
+  document.getElementById('vprev').onclick=function(){i=(i-1+V.length)%V.length;render();};
+  document.getElementById('vnext').onclick=function(){i=(i+1)%V.length;render();};
+  render();
+})();
+</script>
 </body>
 </html>
